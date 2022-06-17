@@ -8,16 +8,16 @@
 </head>
 <body>
     <script>
-        //1.创建类 class 
-        class Star {
+        class Star{
             constructor(uname){
-                this.uname = uname;
+                this.uname = uname
+            }
+            sing(song){
+                console.log(this.uname +'唱了一首'+ song)
             }
         }
-
-        //2.利用类创建对象 new
-        var ldh = new Star('刘德华');
-        console.log(ldh)
+        let zjl = new Star('周杰伦')
+        zjl.sing('稻香');
     </script>
 </body>
 </html>

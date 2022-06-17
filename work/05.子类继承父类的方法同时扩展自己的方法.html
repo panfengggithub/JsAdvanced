@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // super关键字调用父类的普通方法
+        class Fatcher {
+            constructor(x,y) {
+                this.x = x;
+                this.y = y;
+            }
+            add(){
+                return this.x + this.y
+            }
+        }
+        class Son extends Fatcher{
+            constructor(x,y) {
+                super(x,y)//顺序不能搞错
+                this.x = x;
+                this.y = y;
+            }
+            subtract(){
+                console.log(this.x-this.y);
+            }
+        }
+        let son = new Son(2,4);
+         console.log(son.add());
+    </script>
+</body>
+</html>
